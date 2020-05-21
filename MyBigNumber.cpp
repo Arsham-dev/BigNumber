@@ -92,3 +92,12 @@ MyBigNumber MyBigNumber::power(MyBigNumber bigNumber, int pow) {
     }
 }
 
+MyBigNumber MyBigNumber::operator()(int first, int loop) {
+    string str = "";
+    for (int i = 0; i < loop; ++i) {
+        str += ::to_string(this->numArray[first - i]);
+    }
+    MyBigNumber ans = str;
+    return ans;
+}
+

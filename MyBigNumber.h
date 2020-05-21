@@ -29,7 +29,9 @@ public:
 
     MyBigNumber &operator*=(const MyBigNumber &myBigNumber);
 
-     MyBigNumber power(MyBigNumber bigNumber, int pow);
+    MyBigNumber power(MyBigNumber bigNumber, int pow);
+
+    MyBigNumber operator()(int first, int loop);
 
 };
 

@@ -33,8 +33,8 @@ int main() {
 //    catch( out_of_range e){
 //        cout << e.what() << endl;
 //    }
-    MyBigNumber myBigNumber1 = "-100";
-    MyBigNumber myBigNumber2 = myBigNumber1.power(myBigNumber1, 9);
+    MyBigNumber myBigNumber1 = "15728839";
+    MyBigNumber myBigNumber2 = myBigNumber1(7,4);
     cout << myBigNumber2;
 
     return 0;
