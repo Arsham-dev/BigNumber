@@ -61,12 +61,34 @@ MyBigNumber operator*(const MyBigNumber &num1, const MyBigNumber &num2) {
 }
 
 MyBigNumber power(MyBigNumber bigNumber, int pow) {
-    return MyBigNumber();
+    MyBigNumber ans = bigNumber;
+    if (pow == 0) {
+        ans = "1";
+        return ans;
+    } else {
+        for (int j = 1; j < pow; ++j) {
+            ans *= bigNumber;
+        }
+        return ans;
+    }
 }
 
-MyBigNumber &MyBigNumber::operator*=(const MyBigNumber myBigNumber) {
+MyBigNumber &MyBigNumber::operator*=(const MyBigNumber &myBigNumber) {
 
-*this=*this*myBigNumber;
+    *this = *this * myBigNumber;
     return *this;
+}
+
+MyBigNumber MyBigNumber::power(MyBigNumber bigNumber, int pow) {
+    MyBigNumber ans = bigNumber;
+    if (pow == 0) {
+        ans = "1";
+        return ans;
+    } else {
+        for (int j = 1; j < pow; ++j) {
+            ans *= bigNumber;
+        }
+        return ans;
+    }
 }
 

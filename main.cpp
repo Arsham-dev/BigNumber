@@ -3,6 +3,7 @@
 
 #include "BigNumber.h"
 #include "MyBigNumber.h"
+
 using namespace std;
 
 int main() {
@@ -25,17 +26,16 @@ int main() {
     BigNumber myBig2 = "0000173";
     //cout << BigNumber::unsignedLessOrEqual(myBig1, myBig2) << endl;
     //BigNumber a = BigNumber::unsignedSubtract(myBig1, myBig2);
-  //  cout << (myBig1>>3) << "\t" << (myBig1>>3).getSign() << endl;
+    //  cout << (myBig1>>3) << "\t" << (myBig1>>3).getSign() << endl;
 //    try{
 //        cout << BigNumber::unsignedSubtract(myBig1, myBig2) << endl;
 //    }
 //    catch( out_of_range e){
 //        cout << e.what() << endl;
 //    }
-MyBigNumber myBigNumber="654";
-MyBigNumber myBigNumber1="-34";
-BigNumber myBigNumber2=myBigNumber*myBigNumber1;
-myBigNumber1<<3;
-cout<<myBigNumber2;
+    MyBigNumber myBigNumber1 = "-100";
+    MyBigNumber myBigNumber2 = myBigNumber1.power(myBigNumber1, 9);
+    cout << myBigNumber2;
+
     return 0;
 }

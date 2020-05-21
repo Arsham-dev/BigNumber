@@ -27,9 +27,9 @@ public:
 
     friend MyBigNumber operator*(const MyBigNumber &num1, const MyBigNumber &num2);
 
-    MyBigNumber &operator*=(const MyBigNumber myBigNumber);
+    MyBigNumber &operator*=(const MyBigNumber &myBigNumber);
 
-    friend MyBigNumber power(MyBigNumber bigNumber, int pow);
+     MyBigNumber power(MyBigNumber bigNumber, int pow);
 
 };
 
