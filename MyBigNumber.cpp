@@ -25,3 +25,13 @@ std::string MyBigNumber::to_string() const {
     }
     return num;
 }
+
+BigNumber MyBigNumber::multByOneDigit(BigNumber bigNumber, int i) {
+    BigNumber temp = *new BigNumber(bigNumber);
+    for (int j = 1; j < i; ++j) {
+        bigNumber += temp;
+    }
+    if (i < 0)
+        bigNumber.setSign(bigNumber.getSign());
+    return bigNumber;
+}

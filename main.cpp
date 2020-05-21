@@ -34,7 +34,7 @@ int main() {
 //    }
 MyBigNumber myBigNumber="-654";
 MyBigNumber myBigNumber1="-213";
-BigNumber myBigNumber2=myBigNumber1-myBigNumber;
+BigNumber myBigNumber2=MyBigNumber::multByOneDigit(myBigNumber1,10);
 cout<<myBigNumber2;
     return 0;
 }

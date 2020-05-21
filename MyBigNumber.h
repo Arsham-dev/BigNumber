@@ -17,6 +17,8 @@ public:
     MyBigNumber(const long & intNum );
     BigNumber operator<<(unsigned shift );
     std::string to_string() const;
+    static BigNumber multByOneDigit(BigNumber bigNumber, int i);
+
 
 };
 

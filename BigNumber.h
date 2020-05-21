@@ -43,6 +43,7 @@ public:
     ~BigNumber();
     void setValues( const std::string & str );
     bool getSign() const;
+    void setSign(bool signNew);
     unsigned int getNumOfDigits() const;
     BigNumber & operator=(const BigNumber & rightNum);
     BigNumber & operator=(BigNumber && rightNum) noexcept ;   // move assignment overloading

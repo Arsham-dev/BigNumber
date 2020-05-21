@@ -71,7 +71,9 @@ void BigNumber::setValues(const std::string &str) {
 bool BigNumber::getSign() const {
     return sign;
 }
-
+void BigNumber::setSign(bool signNew) {
+    this->sign = signNew;
+}
 unsigned int BigNumber::getNumOfDigits() const {
     return numOfDigits;
 }
@@ -436,7 +438,10 @@ BigNumber &BigNumber::operator+=(const BigNumber &num1) {
     *this = *this + num1;
     return *this;
 }
+
 BigNumber &BigNumber::operator-=(const BigNumber &num1) {
     *this = *this - num1;
     return *this;
 }
+
+
