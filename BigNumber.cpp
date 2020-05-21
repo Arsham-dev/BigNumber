@@ -396,16 +396,38 @@ BigNumber BigNumber::operator>>(unsigned shift) {
 BigNumber operator-(const BigNumber &num1, const BigNumber &num2) {
     BigNumber ans;
     if (num1.getSign() != num2.getSign()) {
-         ans = BigNumber::unsignedAdd(num1, num2);
-        ans.sign=num1.getSign();
-    } else{
-         ans = BigNumber::unsignedSubtract(num1, num2);
-if(num1>num2)
-    ans.sign=num1.getSign();
-else
-    ans.sign=num2.getSign();
+        ans = BigNumber::unsignedAdd(num1, num2);
+        ans.sign = num1.getSign();
+    } else {
+        ans = BigNumber::unsignedSubtract(num1, num2);
+        if (num1 > num2)
+            ans.sign = num1.getSign();
+        else
+            ans.sign = num2.getSign();
 
     }
     return ans;
 
+}
+
+BigNumber &BigNumber::operator--() {
+    *this = *this - 1;
+    return *this;
+}
+
+BigNumber BigNumber::operator--(int) {
+    BigNumber *myBum = new BigNumber(*this);
+    *this = *this - 1;
+    return *myBum;
+}
+
+BigNumber &BigNumber::operator++() {
+    *this = *this - 1;
+    return *this;
+}
+
+BigNumber BigNumber::operator++(int) {
+    BigNumber *myBum = new BigNumber(*this);
+    *this = *this + 1;
+    return *myBum;
 }
