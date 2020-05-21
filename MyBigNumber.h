@@ -16,6 +16,7 @@ public:
     MyBigNumber( const std::string & str );
     MyBigNumber(const long & intNum );
     BigNumber operator<<(unsigned shift );
+    std::string to_string() const;
 
 };
 

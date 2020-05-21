@@ -2,7 +2,7 @@
 #include <cstdint>
 
 #include "BigNumber.h"
-
+#include "MyBigNumber.h"
 using namespace std;
 
 int main() {
@@ -25,12 +25,15 @@ int main() {
     BigNumber myBig2 = "0000173";
     //cout << BigNumber::unsignedLessOrEqual(myBig1, myBig2) << endl;
     //BigNumber a = BigNumber::unsignedSubtract(myBig1, myBig2);
-    cout << (myBig1>>3) << "\t" << (myBig1>>3).getSign() << endl;
+  //  cout << (myBig1>>3) << "\t" << (myBig1>>3).getSign() << endl;
 //    try{
 //        cout << BigNumber::unsignedSubtract(myBig1, myBig2) << endl;
 //    }
 //    catch( out_of_range e){
 //        cout << e.what() << endl;
 //    }
+MyBigNumber myBigNumber="12323123";
+cout<<myBigNumber.to_string();
+
     return 0;
 }

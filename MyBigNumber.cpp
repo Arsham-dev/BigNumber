@@ -4,7 +4,7 @@
 
 #include "MyBigNumber.h"
 #include "BigNumber.h"
-
+using namespace std;
 MyBigNumber::MyBigNumber(const char *myCharArray)
         : BigNumber(myCharArray) {}
 
@@ -16,4 +16,12 @@ MyBigNumber::MyBigNumber(const long &intNum)
 
 BigNumber MyBigNumber::operator<<(unsigned shift) {
     MyBigNumber temp;
+}
+
+std::string MyBigNumber::to_string() const {
+    string num = "";
+    for (int i = this->numOfDigits - 1; i >= 0; --i) {
+        num += (int8_t) (this->numArray[i] + 48);
+    }
+    return num;
 }
