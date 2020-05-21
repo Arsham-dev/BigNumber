@@ -444,4 +444,12 @@ BigNumber &BigNumber::operator-=(const BigNumber &num1) {
     return *this;
 }
 
+std::string BigNumber::to_string() const {
+    string num = "";
+    for (int i = this->numOfDigits - 1; i >= 0; --i) {
+        num += (int8_t) (this->numArray[i] + 48);
+    }
+    return num;
+}
+
 

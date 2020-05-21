@@ -64,6 +64,8 @@ public:
     BigNumber &operator+=(const BigNumber &num1);
     BigNumber &operator-=(const BigNumber &num1);
 
+    virtual std::string to_string() const;
+
 
 };
 

@@ -15,9 +15,12 @@ public:
     MyBigNumber (const char * myCharArray);
     MyBigNumber( const std::string & str );
     MyBigNumber(const long & intNum );
-    BigNumber operator<<(unsigned shift );
-    std::string to_string() const;
+
+    MyBigNumber(const BigNumber& number);
+
     static BigNumber multByOneDigit(BigNumber bigNumber, int i);
+    MyBigNumber &operator<<(unsigned shift);
+    friend MyBigNumber operator*(const MyBigNumber &num1, const MyBigNumber &num2);
 
 
 };

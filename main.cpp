@@ -32,9 +32,10 @@ int main() {
 //    catch( out_of_range e){
 //        cout << e.what() << endl;
 //    }
-MyBigNumber myBigNumber="-654";
-MyBigNumber myBigNumber1="-213";
-BigNumber myBigNumber2=MyBigNumber::multByOneDigit(myBigNumber1,10);
+MyBigNumber myBigNumber="654";
+MyBigNumber myBigNumber1="34";
+BigNumber myBigNumber2=myBigNumber*myBigNumber1;
+myBigNumber1<<3;
 cout<<myBigNumber2;
     return 0;
 }
