@@ -10,11 +10,12 @@
 #include <string>
 
 class MyBigNumber: public BigNumber {
+public:
     MyBigNumber (){}
     MyBigNumber (const char * myCharArray);
     MyBigNumber( const std::string & str );
     MyBigNumber(const long & intNum );
-    BigNumber operator<<(unsigned shift )
+    BigNumber operator<<(unsigned shift );
 
 };
 
