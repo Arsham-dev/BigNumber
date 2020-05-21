@@ -17,15 +17,14 @@ MyBigNumber::MyBigNumber(const long &intNum)
         : BigNumber(intNum) {}
 
 
-BigNumber MyBigNumber::multByOneDigit(BigNumber bigNumber, int i) {
-    BigNumber temp = *new BigNumber(bigNumber);
-    for (int j = 1; j < i; ++j) {
-        bigNumber += temp;
+MyBigNumber MyBigNumber::multByOneDigit(MyBigNumber bigNumber, int j) {
+    MyBigNumber sum("0");
+    for (size_t i = 0; i < j; ++i) {
+        sum += bigNumber;
     }
-    if (i < 0)
-        bigNumber.setSign(bigNumber.getSign());
-    return bigNumber;
+    return sum;
 }
+
 
 MyBigNumber &MyBigNumber::operator<<(unsigned shift) {
     string num = "";
@@ -47,20 +46,16 @@ MyBigNumber::MyBigNumber(const BigNumber &number) {
 }
 
 MyBigNumber operator*(const MyBigNumber &num1, const MyBigNumber &num2) {
-    string num = num2.to_string();
-
-    MyBigNumber ans = *new MyBigNumber("0");
-    for (int i = 0; i < num.size(); ++i) {
-        if (num.at(i) - 48 != 0) {
-            MyBigNumber temp = *new MyBigNumber(num1);
-            for (int j = 1; j < num.at(i) - 48; ++j) {
-                temp += num1;
-            }
-            temp << (int) num.size() - i - 1;ans += temp;
+    MyBigNumber ans("0");
+    for (int i = 0; i < num2.getNumOfDigits(); ++i) {
+        if (num2[i] != 0) {
+            MyBigNumber temp;
+            temp = MyBigNumber::multByOneDigit(num1, num2[i]);
+            temp << i;
+            ans += temp;
         }
     }
-
-
+    ans.setSign(num1.getSign() == num2.getSign());
     return ans;
 
 }

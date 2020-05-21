@@ -18,7 +18,7 @@ public:
 
     MyBigNumber(const BigNumber& number);
 
-    static BigNumber multByOneDigit(BigNumber bigNumber, int i);
+    static MyBigNumber multByOneDigit(MyBigNumber bigNumber, int i);
     MyBigNumber &operator<<(unsigned shift);
     friend MyBigNumber operator*(const MyBigNumber &num1, const MyBigNumber &num2);
 
