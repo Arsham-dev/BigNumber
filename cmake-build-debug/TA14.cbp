@@ -86,6 +86,12 @@
 		<Unit filename="C:/Users/AVAJANG/CLionProjects/HW/BigNumber.h">
 			<Option target="TA14"/>
 		</Unit>
+		<Unit filename="C:/Users/AVAJANG/CLionProjects/HW/MyBigNumber.cpp">
+			<Option target="TA14"/>
+		</Unit>
+		<Unit filename="C:/Users/AVAJANG/CLionProjects/HW/MyBigNumber.h">
+			<Option target="TA14"/>
+		</Unit>
 		<Unit filename="C:/Users/AVAJANG/CLionProjects/HW/main.cpp">
 			<Option target="TA14"/>
 		</Unit>

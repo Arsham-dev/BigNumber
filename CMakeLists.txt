@@ -3,4 +3,4 @@ project(TA14)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(TA14 main.cpp BigNumber.cpp BigNumber.h)
+add_executable(TA14 main.cpp BigNumber.cpp BigNumber.h MyBigNumber.cpp MyBigNumber.h)
