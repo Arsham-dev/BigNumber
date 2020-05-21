@@ -32,8 +32,9 @@ int main() {
 //    catch( out_of_range e){
 //        cout << e.what() << endl;
 //    }
-MyBigNumber myBigNumber="12323123";
-cout<<myBigNumber.to_string();
-
+MyBigNumber myBigNumber="-654";
+MyBigNumber myBigNumber1="-213";
+BigNumber myBigNumber2=myBigNumber1-myBigNumber;
+cout<<myBigNumber2;
     return 0;
 }
