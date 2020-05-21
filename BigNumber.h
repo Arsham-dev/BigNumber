@@ -12,7 +12,6 @@ class BigNumber {
     friend BigNumber operator-(const BigNumber &num1, const BigNumber &num2);
 
 protected:
-    bool sign;
     int8_t * numArray = nullptr;
     unsigned numOfDigits;
 
@@ -24,6 +23,7 @@ protected:
 
     //max(a, b)    a.max(b)
 
+    bool sign;
 public:
     //must be private
     static BigNumber unsignedMax( const BigNumber& num1, const BigNumber& num2);
@@ -60,6 +60,9 @@ public:
     BigNumber operator--(int);
     BigNumber &operator++();
     BigNumber operator++(int);
+    BigNumber &operator+=(const BigNumber &num1);
+    BigNumber &operator-=(const BigNumber &num1);
+
 
 };
 

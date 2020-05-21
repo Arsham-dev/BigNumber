@@ -431,3 +431,12 @@ BigNumber BigNumber::operator++(int) {
     *this = *this + 1;
     return *myBum;
 }
+
+BigNumber &BigNumber::operator+=(const BigNumber &num1) {
+    *this = *this + num1;
+    return *this;
+}
+BigNumber &BigNumber::operator-=(const BigNumber &num1) {
+    *this = *this - num1;
+    return *this;
+}
