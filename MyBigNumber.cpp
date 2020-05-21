@@ -60,3 +60,13 @@ MyBigNumber operator*(const MyBigNumber &num1, const MyBigNumber &num2) {
 
 }
 
+MyBigNumber power(MyBigNumber bigNumber, int pow) {
+    return MyBigNumber();
+}
+
+MyBigNumber &MyBigNumber::operator*=(const MyBigNumber myBigNumber) {
+
+*this=*this*myBigNumber;
+    return *this;
+}
+
