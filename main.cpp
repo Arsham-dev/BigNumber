@@ -35,7 +35,7 @@ int main() {
 //    }
     MyBigNumber myBigNumber1 = "1234567890";
     MyBigNumber myBigNumber2 ="12334";
-    MyBigNumber myBigNumber3=myBigNumber1/myBigNumber2;
+    MyBigNumber myBigNumber3=myBigNumber1%myBigNumber2;
     cout<<myBigNumber3;
     //cout << myBigNumber2;
 
