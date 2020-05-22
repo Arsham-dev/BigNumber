@@ -4,7 +4,7 @@
 
 #include "MyBigNumber.h"
 #include "BigNumber.h"
-
+#include <iostream>
 using namespace std;
 
 MyBigNumber::MyBigNumber(const char *myCharArray)
