@@ -40,10 +40,14 @@ MyBigNumber &MyBigNumber::operator<<(unsigned shift) {
     return *this;
 }
 
-MyBigNumber::MyBigNumber(const BigNumber &number) {
-    number.to_string();
-    MyBigNumber(str);
-}
+/*MyBigNumber::MyBigNumber(const BigNumber &number) {
+    sign = number.getSign();
+    numOfDigits = number.getNumOfDigits();
+    numArray = new int8_t[numOfDigits];
+    for (size_t i{0}; i < numOfDigits; ++i) {
+        //numArray[i] = number.numArray[i];
+    }
+}*/
 
 MyBigNumber operator*(const MyBigNumber &num1, const MyBigNumber &num2) {
     MyBigNumber ans("0");

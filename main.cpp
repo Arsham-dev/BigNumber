@@ -33,9 +33,11 @@ int main() {
 //    catch( out_of_range e){
 //        cout << e.what() << endl;
 //    }
-    MyBigNumber myBigNumber1 = "15728839";
-    MyBigNumber myBigNumber2 = myBigNumber1(7,4);
-    cout << myBigNumber2;
+    MyBigNumber myBigNumber1 = "1234567890";
+    MyBigNumber myBigNumber2 ="12334";
+    MyBigNumber myBigNumber3=myBigNumber1/myBigNumber2;
+    cout<<myBigNumber3;
+    //cout << myBigNumber2;
 
     return 0;
 }

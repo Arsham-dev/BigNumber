@@ -15,7 +15,6 @@ class BigNumber {
     friend BigNumber operator-(const BigNumber &num1, const BigNumber &num2);
 
 protected:
-    int8_t *numArray = nullptr;
     unsigned numOfDigits;
 
     bool validate(const std::string &str, const std::string &pattern);
@@ -30,6 +29,7 @@ protected:
     //max(a, b)    a.max(b)
 
     bool sign;
+    int8_t *numArray = nullptr;
 public:
     //must be private
     static BigNumber unsignedMax(const BigNumber &num1, const BigNumber &num2);
