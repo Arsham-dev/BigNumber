@@ -424,7 +424,7 @@ BigNumber BigNumber::operator--(int) {
 }
 
 BigNumber &BigNumber::operator++() {
-    *this = *this - 1;
+    *this = *this + 1;
     return *this;
 }
 

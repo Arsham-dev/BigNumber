@@ -21,7 +21,7 @@ public:
 
     MyBigNumber(const BigNumber &number);
 
-    static MyBigNumber multByOneDigit(MyBigNumber bigNumber, int i);
+    static MyBigNumber multByOneDigit(const MyBigNumber &bigNumber, int i);
 
     MyBigNumber &operator<<(unsigned shift);
 
@@ -29,7 +29,7 @@ public:
 
     MyBigNumber &operator*=(const MyBigNumber &myBigNumber);
 
-    MyBigNumber power(MyBigNumber bigNumber, int pow);
+    static MyBigNumber power(MyBigNumber bigNumber, unsigned pow);
 
     MyBigNumber operator()(int first, int loop);
 

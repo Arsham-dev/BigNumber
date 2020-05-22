@@ -1,13 +1,11 @@
 #include <iostream>
-#include <cstdint>
-
 #include "BigNumber.h"
 #include "MyBigNumber.h"
 
 using namespace std;
 
 int main() {
-    cout << boolalpha;
+    //  cout << boolalpha;
 
 //    for(unsigned char i{0}; i <= 127; ++i){
 //        std::cout << (int) i << '\t' << i << std::endl;
@@ -22,8 +20,8 @@ int main() {
 //    x = -y;
 //    BigNumber z = -y;
 //    cout << (x != y) << endl;
-    BigNumber myBig1 = -17319;
-    BigNumber myBig2 = "0000173";
+    // BigNumber myBig1 = -17319;
+    //  BigNumber myBig2 = "0000173";
     //cout << BigNumber::unsignedLessOrEqual(myBig1, myBig2) << endl;
     //BigNumber a = BigNumber::unsignedSubtract(myBig1, myBig2);
     //  cout << (myBig1>>3) << "\t" << (myBig1>>3).getSign() << endl;

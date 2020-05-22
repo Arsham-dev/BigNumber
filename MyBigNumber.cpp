@@ -4,7 +4,7 @@
 
 #include "MyBigNumber.h"
 #include "BigNumber.h"
-#include <iostream>
+
 using namespace std;
 
 MyBigNumber::MyBigNumber(const char *myCharArray)
@@ -17,11 +17,13 @@ MyBigNumber::MyBigNumber(const long &intNum)
         : BigNumber(intNum) {}
 
 
-MyBigNumber MyBigNumber::multByOneDigit(MyBigNumber bigNumber, int j) {
+MyBigNumber MyBigNumber::multByOneDigit(const MyBigNumber &bigNumber, int j) {
     MyBigNumber sum("0");
-    for (size_t i = 0; i < j; ++i) {
-        sum += bigNumber;
+    for (int i = 0; i < abs(j); ++i) {
+        sum = sum + bigNumber;
     }
+    if(j<0)
+        sum.setSign(!sum.getSign());
     return sum;
 }
 
@@ -40,15 +42,6 @@ MyBigNumber &MyBigNumber::operator<<(unsigned shift) {
     return *this;
 }
 
-/*MyBigNumber::MyBigNumber(const BigNumber &number) {
-    sign = number.getSign();
-    numOfDigits = number.getNumOfDigits();
-    numArray = new int8_t[numOfDigits];
-    for (size_t i{0}; i < numOfDigits; ++i) {
-        //numArray[i] = number.numArray[i];
-    }
-}*/
-
 MyBigNumber operator*(const MyBigNumber &num1, const MyBigNumber &num2) {
     MyBigNumber ans("0");
     for (int i = 0; i < num2.getNumOfDigits(); ++i) {
@@ -64,26 +57,13 @@ MyBigNumber operator*(const MyBigNumber &num1, const MyBigNumber &num2) {
 
 }
 
-MyBigNumber power(MyBigNumber bigNumber, int pow) {
-    MyBigNumber ans = bigNumber;
-    if (pow == 0) {
-        ans = "1";
-        return ans;
-    } else {
-        for (int j = 1; j < pow; ++j) {
-            ans *= bigNumber;
-        }
-        return ans;
-    }
-}
-
 MyBigNumber &MyBigNumber::operator*=(const MyBigNumber &myBigNumber) {
 
     *this = *this * myBigNumber;
     return *this;
 }
 
-MyBigNumber MyBigNumber::power(MyBigNumber bigNumber, int pow) {
+MyBigNumber MyBigNumber::power(MyBigNumber bigNumber, unsigned pow) {
     MyBigNumber ans = bigNumber;
     if (pow == 0) {
         ans = "1";
@@ -96,7 +76,7 @@ MyBigNumber MyBigNumber::power(MyBigNumber bigNumber, int pow) {
     }
 }
 
-MyBigNumber MyBigNumber::operator()(int first, int loop) {
+MyBigNumber MyBigNumber::operator()(unsigned first, unsigned loop) {
     string str = "";
     for (int i = 0; i < loop; ++i) {
         str += ::to_string(this->numArray[first - i]);
