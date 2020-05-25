@@ -22,7 +22,7 @@ MyBigNumber MyBigNumber::multByOneDigit(const MyBigNumber &bigNumber, int j) {
     for (int i = 0; i < abs(j); ++i) {
         sum = sum + bigNumber;
     }
-    if(j<0)
+    if (j < 0)
         sum.setSign(!sum.getSign());
     return sum;
 }
@@ -64,16 +64,13 @@ MyBigNumber &MyBigNumber::operator*=(const MyBigNumber &myBigNumber) {
 }
 
 MyBigNumber MyBigNumber::power(MyBigNumber bigNumber, unsigned pow) {
-    MyBigNumber ans = bigNumber;
-    if (pow == 0) {
-        ans = "1";
-        return ans;
-    } else {
-        for (int j = 1; j < pow; ++j) {
-            ans *= bigNumber;
-        }
-        return ans;
+    MyBigNumber ans = 1;
+
+    for (int j = 0; j < pow; ++j) {
+        ans *= bigNumber;
     }
+    return ans;
+
 }
 
 MyBigNumber MyBigNumber::operator()(unsigned first, unsigned loop) {
