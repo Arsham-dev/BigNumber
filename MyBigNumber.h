@@ -7,7 +7,6 @@
 
 #include "BigNumber.h"
 
-#include <string>
 
 class MyBigNumber : public BigNumber {
 public:
